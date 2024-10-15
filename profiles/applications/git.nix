@@ -41,6 +41,15 @@ with lib;
         merge = {
           conflictstyle = "diff3";
         };
+
+        push = {
+          default = "current";
+          autoSetupRemote = true;
+        };
+
+        branch = {
+          autosetuprebase = "always";
+        };
       };
     };
   };
