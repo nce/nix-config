@@ -10,6 +10,10 @@
       shellIntegration.enableZshIntegration = true;
 
       themeFile = "ayu_mirage";
+
+      settings = {
+        background_opacity = 0.9;
+      };
     };
   };
 

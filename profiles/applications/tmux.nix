@@ -5,6 +5,11 @@
 
 {
   programs = {
+
+    fzf = {
+      tmux.enableShellIntegration = true;
+    };
+
     tmux = {
       enable = true;
       shell = "${pkgs.zsh}/bin/zsh";
