@@ -15,6 +15,7 @@ with lib;
       kubernetes-helm
       dive
       stern
+      krew
     ];
   };
 
