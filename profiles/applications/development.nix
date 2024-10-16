@@ -13,6 +13,7 @@ with lib;
       go-critic
       cargo
       nixfmt-rfc-style
+      coreutils
     ];
   };
 
