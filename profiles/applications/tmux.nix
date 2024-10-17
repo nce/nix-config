@@ -22,7 +22,7 @@
       mouse = true;
       terminal = "tmux-256color";
       newSession = true;
-      #      sensibleOnTop = true;
+      sensibleOnTop = true;
 
       plugins = with pkgs; [
         tmuxPlugins.vim-tmux-navigator

@@ -8,5 +8,6 @@
     ./gui.nix
     ./git.nix
     ./kitty.nix
+    ./nvim.nix
   ];
 }
