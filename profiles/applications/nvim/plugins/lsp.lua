@@ -49,6 +49,7 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
     { name = 'fuzzy_buffer' },
+    { name = 'path' },
   },
   snippet = {
     expand = function(args)
@@ -75,6 +76,20 @@ cmp.setup({
     ['<C-b>'] = cmp.mapping.select_next_item(cmp_select),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
+  })
+})
+
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    {
+      name = 'cmdline',
+      option = {
+        ignore_cmds = { 'Man', '!' }
+      }
+    }
   })
 })
 

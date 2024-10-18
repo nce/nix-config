@@ -13,10 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    plugin-nvim-lsp-zero.url = "github:VonHeikemen/lsp-zero.nvim";
-    plugin-nvim-lsp-zero.flake = false;
-
   };
 
   outputs =
