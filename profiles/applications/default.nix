@@ -9,5 +9,6 @@
     ./git.nix
     ./kitty.nix
     ./nvim.nix
+    ./cli.nix
   ];
 }
