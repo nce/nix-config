@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   ...
 }:
@@ -7,6 +8,22 @@
   home = {
     packages = with pkgs; [
       gopls
+    ];
+  };
+
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        vimPlugins = prev.vimPlugins // {
+          nvim-zero-lsp = prev.vimUtils.buildVimPlugin {
+            name = "nvim-zero-lsp";
+            src = {
+              url = "github:VonHeikemen/lsp-zero.nvim";
+              flake = false;
+            };
+          };
+        };
+      })
     ];
   };
 
@@ -21,11 +38,11 @@
 
       plugins = with pkgs.vimPlugins; [
         # lsp
-        {
-          plugin = lsp-zero-nvim;
-          type = "lua";
-          config = builtins.readFile ./nvim/plugins/lsp.lua;
-        }
+        #{
+          #plugin = nvim-zero-lsp;
+          #type = "lua";
+          #config = builtins.readFile ./nvim/plugins/lsp.lua;
+          #}
         nvim-lspconfig
         nvim-cmp
         cmp-nvim-lsp
@@ -38,6 +55,12 @@
 
         render-markdown-nvim
         ChatGPT-nvim
+
+        {
+          plugin = nvim-surround;
+          type = "lua";
+          config = "require(\"nvim-surround\").setup()";
+        }
 
         # misc/deps
         nvim-web-devicons
@@ -126,6 +149,12 @@
           plugin = harpoon2;
           type = "lua";
           config = builtins.readFile ./nvim/plugins/harpoon2.lua;
+        }
+
+        {
+          plugin = zen-mode-nvim;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/zen-mode-nvim.lua;
         }
 
       ];
