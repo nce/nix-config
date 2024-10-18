@@ -1,5 +1,5 @@
-  require("hover").setup({
-    init = function()
+require("hover").setup({
+  init = function()
     -- Require providers
     require("hover.providers.lsp")
     -- require('hover.providers.gh')

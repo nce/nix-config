@@ -8,26 +8,15 @@
   home = {
     packages = with pkgs; [
       gopls
-    ];
-  };
-
-  nixpkgs = {
-    overlays = [
-      (final: prev: {
-        vimPlugins = prev.vimPlugins // {
-          nvim-zero-lsp = prev.vimUtils.buildVimPlugin {
-            name = "nvim-zero-lsp";
-            src = {
-              url = "github:VonHeikemen/lsp-zero.nvim";
-              flake = false;
-            };
-          };
-        };
-      })
+      gofumpt
+      gotools
+      nixfmt-rfc-style
+      nil
     ];
   };
 
   programs = {
+
     neovim = {
       enable = true;
 
@@ -38,15 +27,20 @@
 
       plugins = with pkgs.vimPlugins; [
         # lsp
-        #{
-          #plugin = nvim-zero-lsp;
-          #type = "lua";
-          #config = builtins.readFile ./nvim/plugins/lsp.lua;
-          #}
+        {
+          plugin = lsp-zero-nvim;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/lsp.lua;
+        }
         nvim-lspconfig
         nvim-cmp
         cmp-nvim-lsp
         lspkind-nvim
+        mason-nvim
+        mason-lspconfig-nvim
+        lspkind-nvim
+        cmp-fuzzy-buffer
+        fuzzy-nvim
         {
           plugin = hover-nvim;
           type = "lua";
@@ -67,6 +61,9 @@
         plenary-nvim
         nui-nvim
         dressing-nvim
+
+        # tmux resurrect
+        vim-obsession
 
         {
           plugin = Navigator-nvim;
@@ -155,6 +152,11 @@
           plugin = zen-mode-nvim;
           type = "lua";
           config = builtins.readFile ./nvim/plugins/zen-mode-nvim.lua;
+        }
+        {
+          plugin = conform-nvim;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/conform-nvim.lua;
         }
 
       ];
