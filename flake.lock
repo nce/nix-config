@@ -56,11 +56,28 @@
         "type": "github"
       }
     },
+    "plugin-nvim-lsp-zero": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729102013,
+        "narHash": "sha256-tXllggyw7sm8zwOHrn+2mcTHch6Vp1u3BhjxvH+VCbA=",
+        "owner": "VonHeikemen",
+        "repo": "lsp-zero.nvim",
+        "rev": "19a8b90340c6c522219c84f7befe784d657ab28e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VonHeikemen",
+        "repo": "lsp-zero.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
         "homemanager": "homemanager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugin-nvim-lsp-zero": "plugin-nvim-lsp-zero"
       }
     }
   },

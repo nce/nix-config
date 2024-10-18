@@ -14,6 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    plugin-nvim-lsp-zero.url = "github:VonHeikemen/lsp-zero.nvim";
+    plugin-nvim-lsp-zero.flake = false;
+
   };
 
   outputs =
@@ -39,7 +42,6 @@
           security.pam.enableSudoTouchIdAuth = true;
 
           nixpkgs.hostPlatform = "aarch64-darwin";
-          #nixpkgs.config.allowUnfree = true;
 
           # Create /etc/zshrc that loads the nix-darwin environment.
           # don't remove... (or restore /run/current-system/sw/bin/darwin-rebuild  switch  --flake .#mbair22)
@@ -63,8 +65,8 @@
             inherit inputs;
             inherit username;
           };
-        };
 
+        };
     in
     {
       darwinConfigurations = {
@@ -72,6 +74,9 @@
           ./profiles/user.nix
           {
             home-manager = {
+              extraSpecialArgs = {
+                inherit inputs;
+              };
               users = {
                 ${username} = {
                   imports = [

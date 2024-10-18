@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   imports = [
     ../shared/global
     #    ../../shared/programs
