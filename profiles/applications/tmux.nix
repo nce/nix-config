@@ -42,6 +42,13 @@
           '';
         }
         {
+          plugin = tmuxPlugins.tmux-sessionx;
+          extraConfig = ''
+            set -g @sessionx-bind 'o'
+            set -g @sessionx-zoxide-mode 'on'
+          '';
+        }
+        {
           plugin = tmuxPlugins.resurrect;
           extraConfig = "set -g @resurrect-strategy-nvim 'session'";
         }
