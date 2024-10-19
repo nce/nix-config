@@ -130,7 +130,11 @@
           config = builtins.readFile ./nvim/plugins/gitsigns-nvim.lua;
         }
 
-        mini-nvim
+        {
+          plugin = nvim-notify;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/notify.lua;
+        }
         {
           plugin = noice-nvim;
           type = "lua";
