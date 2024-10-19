@@ -98,3 +98,12 @@ cmp.setup.cmdline('/', {
     { name = 'fuzzy_buffer' }
   })
 })
+
+-- Set configuration for specific filetype.
+cmp.setup.filetype('gitcommit', {
+  sources = cmp.config.sources({
+    { name = 'git' },
+  }, {
+    { name = 'buffer' },
+  })
+})

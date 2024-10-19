@@ -37,6 +37,7 @@
         cmp-nvim-lsp
         cmp-path
         cmp-cmdline
+        cmp-git
         lspkind-nvim
         mason-nvim
         mason-lspconfig-nvim
