@@ -13,6 +13,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
   outputs =
@@ -21,6 +23,7 @@
       darwin,
       nixpkgs,
       homemanager,
+      mac-app-util,
       ...
     }@inputs:
     let
@@ -53,6 +56,7 @@
 
           modules = [
             configuration
+            mac-app-util.darwinModules.default
             homemanager.darwinModules.home-manager
             configurationNix
           ] ++ extraModules;
@@ -73,6 +77,9 @@
               extraSpecialArgs = {
                 inherit inputs;
               };
+              sharedModules = [
+                mac-app-util.homeManagerModules.default
+              ];
               users = {
                 ${username} = {
                   imports = [
