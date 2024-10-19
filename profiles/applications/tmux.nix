@@ -16,8 +16,6 @@
       prefix = "C-a";
 
       clock24 = true;
-      escapeTime = 10;
-      keyMode = "vi";
 
       mouse = true;
       terminal = "tmux-256color";
@@ -89,6 +87,7 @@
       ];
 
       extraConfig = ''
+        bind a send-prefix               # use a to go to the start of line
         set -g renumber-windows on       # renumber all windows when any window is closed
         set -g base-index 1              # start indexing windows at 1 instead of 0
         set -g set-clipboard on          # use system clipboard
