@@ -10,5 +10,6 @@
     ./kitty.nix
     ./nvim.nix
     ./cli.nix
+    ./ssh.nix
   ];
 }
