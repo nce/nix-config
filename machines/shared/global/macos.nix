@@ -1,6 +1,16 @@
 {
+  pkgs,
+  ...
+}:
+{
   config = {
     system = {
+
+      keyboard = {
+        enableKeyMapping = true;
+        remapCapsLockToControl = true;
+      };
+
       defaults = {
 
         NSGlobalDomain = {
@@ -52,13 +62,29 @@
           wvous-bl-corner = 13;
           wvous-tr-corner = 11;
           wvous-br-corner = 4;
+
+          persistent-apps = [
+            "${pkgs.mailspring}/Applications/Mailspring.app"
+            "/System/Cryptexes/App/System/Applications/Safari.app"
+            "/Applications/Brave Browser.app"
+            "${pkgs.kitty}/Applications/kitty.app"
+            "/System/Applications/Calendar.app"
+            "/System/Applications/Messages.app"
+            "${pkgs.slack}/Applications/Slack.app"
+            "${pkgs.obsidian}/Applications/Obsidian.app"
+            "/System/Applications/Music.app"
+          ];
         };
 
         finder = {
           AppleShowAllExtensions = true;
+          AppleShowAllFiles = true;
           FXEnableExtensionChangeWarning = false;
+          FXPreferredViewStyle = "clmv";
           QuitMenuItem = true;
-          _FXShowPosixPathInTitle = true;
+          _FXShowPosixPathInTitle = false;
+          ShowPathbar = true;
+          ShowStatusBar = true;
         };
 
         loginwindow = {
@@ -75,6 +101,14 @@
           location = "~/Pictures/Screenshots";
         };
 
+        trackpad = {
+          ActuationStrength = 1;
+          Clicking = true;
+          FirstClickThreshold = 1;
+          SecondClickThreshold = 1;
+          TrackpadRightClick = true;
+          TrackpadThreeFingerDrag = false;
+        };
       };
     };
   };
