@@ -10,6 +10,7 @@ with lib;
     packages = with pkgs; [
       awscli2
       oci-cli
+      aws-vault
     ];
   };
 }
