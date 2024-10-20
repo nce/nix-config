@@ -1,7 +1,7 @@
 {
   imports = [
     ../shared/global
-    #    ../../shared/programs
+    ./brews
   ];
 
   networking = {

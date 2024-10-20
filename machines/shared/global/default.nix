@@ -4,6 +4,7 @@
     ./macos.nix
     ./packages.nix
     ./time.nix
+    ./brews.nix
   ];
 
   config = {
