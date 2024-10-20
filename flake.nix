@@ -15,6 +15,8 @@
     };
 
     mac-app-util.url = "github:hraban/mac-app-util";
+
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs =
@@ -24,6 +26,7 @@
       nixpkgs,
       homemanager,
       mac-app-util,
+      nix-homebrew,
       ...
     }@inputs:
     let
@@ -58,6 +61,7 @@
             configuration
             mac-app-util.darwinModules.default
             homemanager.darwinModules.home-manager
+            nix-homebrew.darwinModules.nix-homebrew
             configurationNix
           ] ++ extraModules;
 
