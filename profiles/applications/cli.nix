@@ -5,13 +5,14 @@
 }:
 with lib;
 
-
 {
   home = {
     packages = with pkgs; [
       gnuplot
+      qrencode
       tourenbuchctl
       texlive.combined.scheme-full
+      pwgen
     ];
   };
 
