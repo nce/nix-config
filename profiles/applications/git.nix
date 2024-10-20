@@ -51,6 +51,16 @@ with lib;
           autosetuprebase = "always";
         };
       };
+
+      ignores = [
+        ".DS_Store"
+        "*.out"
+        "Session.vim"
+        "Sessionx.vim"
+        "[._]*.s[a-v][a-z]"
+        ".Spotlight-V100"
+        "._*"
+      ];
     };
   };
 }
