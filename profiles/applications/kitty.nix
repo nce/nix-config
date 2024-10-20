@@ -7,7 +7,7 @@
         size = 18;
       };
 
-      shellIntegration.enableZshIntegration = true;
+      shellIntegration.enableZshIntegration = false;
 
       themeFile = "ayu_mirage";
 
