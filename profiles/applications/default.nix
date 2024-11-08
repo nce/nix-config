@@ -11,5 +11,6 @@
     ./nvim.nix
     ./cli.nix
     ./ssh.nix
+    ./work.nix
   ];
 }
