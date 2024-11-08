@@ -31,7 +31,9 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 
 Rebuild system:
 ```sh
-darwin-rebuild switch --flake ~/nix#nce ```
+darwin-rebuild switch --flake ~/nix#nce
+```
+
 
 
 ## After install steps
