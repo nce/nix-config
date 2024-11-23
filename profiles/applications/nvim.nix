@@ -165,7 +165,11 @@
           type = "lua";
           config = builtins.readFile ./nvim/plugins/conform-nvim.lua;
         }
-
+        {
+          plugin = obsidian-nvim;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/obsidian-nvim.lua;
+        }
       ];
 
       extraLuaConfig = ''
