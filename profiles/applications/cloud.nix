@@ -11,6 +11,7 @@ with lib;
       awscli2
       oci-cli
       aws-vault
+      terraform
     ];
   };
 }
