@@ -12,5 +12,6 @@
     ./cli.nix
     ./ssh.nix
     ./work.nix
+    ./tiling.nix
   ];
 }
