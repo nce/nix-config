@@ -38,6 +38,7 @@ with lib;
         "tunnelblick"
         "keybase"
         "moneymoney"
+        "citrix-workspace"
       ];
     };
   };
