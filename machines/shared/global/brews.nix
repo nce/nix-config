@@ -34,11 +34,11 @@ with lib;
 
       casks = [
         "macpass"
-        "brave-browser"
         "tunnelblick"
         "keybase"
         "moneymoney"
         "citrix-workspace"
+        "zen-browser"
       ];
     };
   };
