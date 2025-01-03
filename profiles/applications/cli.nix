@@ -13,6 +13,8 @@ with lib;
       tourenbuchctl
       texlive.combined.scheme-full
       pwgen
+      qmk
+      teensy-loader-cli
     ];
   };
 
