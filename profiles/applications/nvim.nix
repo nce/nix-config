@@ -150,6 +150,12 @@
         }
 
         {
+          plugin = lazygit-nvim;
+          type = "lua";
+          config = builtins.readFile ./nvim/plugins/lazygit.lua;
+        }
+
+        {
           plugin = harpoon2;
           type = "lua";
           config = builtins.readFile ./nvim/plugins/harpoon2.lua;

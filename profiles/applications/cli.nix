@@ -15,6 +15,7 @@ with lib;
       pwgen
       qmk
       teensy-loader-cli
+      lazygit
     ];
   };
 
