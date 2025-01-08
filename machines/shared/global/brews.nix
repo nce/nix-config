@@ -40,7 +40,7 @@ with lib;
         "citrix-workspace"
         "zen-browser"
         "ghostty"
-        "logi-options+"
+        "bambu-studio"
       ];
     };
   };
