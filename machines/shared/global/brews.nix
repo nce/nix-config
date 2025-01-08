@@ -39,6 +39,8 @@ with lib;
         "moneymoney"
         "citrix-workspace"
         "zen-browser"
+        "ghostty"
+        "logi-options+"
       ];
     };
   };
