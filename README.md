@@ -41,3 +41,10 @@ darwin-rebuild switch --flake ~/nix#nce
 Install EurKey by hand...
 ### Browser
 Set Default Browser via System Settings
+
+## Updates
+```sh
+nix flake update
+darwin-rebuild switch --flake ...
+
+```

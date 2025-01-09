@@ -7,7 +7,7 @@
     ./tmux.nix
     ./gui.nix
     ./git.nix
-    ./kitty.nix
+    ./ghostty.nix
     ./nvim.nix
     ./cli.nix
     ./ssh.nix

@@ -1,4 +1,10 @@
-{ pkgs, lib, config, options, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  options,
+  ...
+}:
 with lib;
 
 {
@@ -6,9 +12,8 @@ with lib;
     fonts = {
       packages = with pkgs; [
         corefonts
-        fira-code-nerdfont
         font-awesome
-        nerdfonts
+        nerd-fonts.fira-code
         noto-fonts
         noto-fonts-emoji
         noto-fonts-extra
