@@ -39,8 +39,8 @@ with lib;
         "moneymoney"
         "citrix-workspace"
         "zen-browser"
-        "ghostty"
         "bambu-studio"
+        "ghostty"
       ];
     };
   };

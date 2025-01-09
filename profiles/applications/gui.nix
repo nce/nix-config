@@ -12,6 +12,7 @@ with lib;
       slack
       obsidian
       discord
+      soundsource
     ];
   };
 }
