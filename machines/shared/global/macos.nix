@@ -67,7 +67,7 @@
             "${pkgs.mailspring}/Applications/Mailspring.app"
             "/System/Cryptexes/App/System/Applications/Safari.app"
             "/Applications/Zen Browser.app"
-            "${pkgs.kitty}/Applications/kitty.app"
+            "/Applications/ghostty.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Messages.app"
             "${pkgs.slack}/Applications/Slack.app"

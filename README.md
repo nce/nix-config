@@ -39,3 +39,5 @@ darwin-rebuild switch --flake ~/nix#nce
 ## After install steps
 ### Keyboard Layout
 Install EurKey by hand...
+### Browser
+Set Default Browser via System Settings
