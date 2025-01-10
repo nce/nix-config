@@ -6,6 +6,7 @@
         "elgato-control-center"
         "elgato-stream-deck"
         "logi-options+"
+        "steam"
       ];
     };
   };
