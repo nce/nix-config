@@ -42,6 +42,10 @@ with lib;
         "bambu-studio"
         "ghostty"
       ];
+
+      masApps = {
+        Spark = 1176895641;
+      };
     };
   };
 }
