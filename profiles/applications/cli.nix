@@ -16,6 +16,12 @@ with lib;
       qmk
       teensy-loader-cli
       lazygit
+      (aspellWithDicts (
+        dicts: with dicts; [
+          en
+          de
+        ]
+      ))
     ];
   };
 
