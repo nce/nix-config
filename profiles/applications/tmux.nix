@@ -4,6 +4,36 @@
 }:
 
 {
+  home = {
+    packages = with pkgs; [
+      tmuxp
+    ];
+
+    file = {
+      ".tmuxp/tourenbuch.yaml" = {
+        text = ''
+          session_name: tourenbuch
+          start_directory: ~/vcs/github/nce/tourenbuch/
+          windows:
+            - window_name: tourenbuch
+              layout: tiled
+              panes:
+                - shell_command:
+                  - vim .
+                - pane
+                - shell_command:
+                  - cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/privat/sport/Tourenbuch
+            - window_name: tourenbuchctl
+              start_directory: ~/vcs/github/nce/tourenbuchctl/
+              panes:
+                - shell_command:
+                  - vim .
+                - pane
+        '';
+      };
+    };
+  };
+
   programs = {
 
     fzf = {
