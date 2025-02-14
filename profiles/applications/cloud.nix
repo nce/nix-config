@@ -12,6 +12,7 @@ with lib;
       oci-cli
       aws-vault
       terraform
+      ansible
     ];
   };
 }
