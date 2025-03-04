@@ -21,9 +21,19 @@ Nix System is installed with the  `determinate.systems` installer, after the fir
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
+## Initial Provision `macmini24`
+```
+nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "github.com/nce/nix-config#macmini24"
+```
+
+Rebuild system:
+```sh
+darwin-rebuild switch --flake ~/vcs/github/nce/nix-config.#mbair22
+```
+
 ## Initial Provision `mbair22`
 ```
-nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "github.com/nix-config#mbair22"
+nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "github.com/nce/nix-config#mbair22"
 ```
 
 Rebuild system:

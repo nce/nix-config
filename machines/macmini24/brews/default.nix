@@ -1,0 +1,8 @@
+{
+  config = {
+    homebrew = {
+      casks = [
+      ];
+    };
+  };
+}
