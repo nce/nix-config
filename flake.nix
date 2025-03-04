@@ -75,6 +75,27 @@
     {
       darwinConfigurations = {
 
+        macmini24 = mkComputer ./machines/macmini24 "aarch64-darwin" [
+          ./profiles/user.nix
+          {
+            home-manager = {
+              extraSpecialArgs = {
+                inherit inputs;
+              };
+              sharedModules = [
+                mac-app-util.homeManagerModules.default
+              ];
+              users = {
+                ${username} = {
+                  imports = [
+                    ./profiles/home.nix
+                  ];
+                };
+              };
+            };
+          }
+        ];
+
         macminipro24 = mkComputer ./machines/macminipro24 "aarch64-darwin" [
           ./profiles/user.nix
           {
