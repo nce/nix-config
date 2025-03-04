@@ -141,5 +141,6 @@
       };
       mbair22 = self.darwinConfigurations.mbair22.system;
       macminipro24 = self.darwinConfigurations.macminipro24.system;
+      macmini24 = self.darwinConfigurations.macmini24.system;
     };
 }
