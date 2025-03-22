@@ -28,7 +28,7 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 
 Rebuild system:
 ```sh
-darwin-rebuild switch --flake ~/vcs/github/nce/nix-config.#mbair22
+darwin-rebuild switch --flake ~/vcs/github/nce/nix-config/.#macmini24
 ```
 
 ## Initial Provision `mbair22`
@@ -38,7 +38,7 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 
 Rebuild system:
 ```sh
-darwin-rebuild switch --flake .#mbair22
+darwin-rebuild switch --flake ~/vcs/github/nce/nix-config/.#mbair22
 ```
 
 ## Initial Provision `macminipro24`
@@ -47,7 +47,13 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 ```
 Rebuild system:
 ```sh
-darwin-rebuild switch --flake .#macminipro24
+darwin-rebuild switch --flake ~/vcs/github/nce/nix-config/.#macminipro24
+```
+
+# Updates
+```sh
+nix flake update
+darwin-rebuild switch --flake ...
 ```
 
 ## After install steps
@@ -56,9 +62,4 @@ Install EurKey by hand...
 ### Browser
 Set Default Browser via System Settings
 
-## Updates
-```sh
-nix flake update
-darwin-rebuild switch --flake ...
 
-```
