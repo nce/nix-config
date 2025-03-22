@@ -38,10 +38,12 @@
           environment.systemPackages = [
             #pkgs.neovim
           ];
-          services.nix-daemon.enable = true;
+          #services.nix-daemon.enable = true;
           nix.settings.experimental-features = "nix-command flakes";
+	  nix.enable = false;
 
-          security.pam.enableSudoTouchIdAuth = true;
+          #security.pam.enableSudoTouchIdAuth = true;
+	  security.pam.services.sudo_local.touchIdAuth = true;
 
           nixpkgs.hostPlatform = "aarch64-darwin";
 
