@@ -7,6 +7,7 @@
         "elgato-stream-deck"
         "logi-options+"
         "steam"
+        "garmin-basecamp"
       ];
     };
   };
