@@ -34,14 +34,14 @@ with lib;
         }
       ];
 
-      initExtra = ''
-                source <(flux completion zsh)
+      initContent = ''
+        source <(flux completion zsh)
 
-                command -v fzf >/dev/null 2>&1 && { 
+        command -v fzf >/dev/null 2>&1 && { 
           source <(kubectl completion zsh | sed 's#''${requestComp} 2>/dev/null#''${requestComp} 2>/dev/null | head -n-1 | fzf  --multi=0 #g')
         }
-                alias kubectl="kubecolor"
-                compdef kubecolor=kubectl
+        alias kubectl="kubecolor"
+        compdef kubecolor=kubectl
       '';
       shellAliases = {
         kgpnr = "k get pod -A|grep -v \"Runni\|Compl\"";
@@ -107,7 +107,7 @@ with lib;
           logger = {
             tail = 100;
             buffer = 5000;
-            sinceSeconds = 60;
+            sinceSeconds = -1;
             fullScreenLogs = false;
             textWrap = true;
             showTime = false;

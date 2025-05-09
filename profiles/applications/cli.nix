@@ -16,6 +16,7 @@ with lib;
       qmk
       teensy-loader-cli
       lazygit
+      restic
       (aspellWithDicts (
         dicts: with dicts; [
           en
