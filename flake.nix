@@ -40,10 +40,10 @@
           ];
           #services.nix-daemon.enable = true;
           nix.settings.experimental-features = "nix-command flakes";
-	  nix.enable = false;
+          nix.enable = false;
 
           #security.pam.enableSudoTouchIdAuth = true;
-	  security.pam.services.sudo_local.touchIdAuth = true;
+          security.pam.services.sudo_local.touchIdAuth = true;
 
           nixpkgs.hostPlatform = "aarch64-darwin";
 
@@ -77,6 +77,7 @@
     {
       darwinConfigurations = {
 
+        system.primaryUser = "nce";
         macmini24 = mkComputer ./machines/macmini24 "aarch64-darwin" [
           ./profiles/user.nix
           {

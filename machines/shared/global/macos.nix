@@ -6,6 +6,8 @@
   config = {
     system = {
 
+      primaryUser = "nce";
+
       keyboard = {
         enableKeyMapping = true;
         remapCapsLockToControl = true;
