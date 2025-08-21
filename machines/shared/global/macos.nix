@@ -68,7 +68,6 @@
           persistent-apps = [
             "${pkgs.mailspring}/Applications/Mailspring.app"
             "/System/Cryptexes/App/System/Applications/Safari.app"
-            "/Applications/Zen Browser.app"
             "/Applications/ghostty.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Messages.app"

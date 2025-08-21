@@ -38,7 +38,6 @@ with lib;
         "keybase"
         "moneymoney"
         "citrix-workspace"
-        "zen-browser"
         "bambu-studio"
         "ghostty"
       ];
