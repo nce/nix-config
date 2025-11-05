@@ -10,6 +10,7 @@ with lib;
     packages = with pkgs; [
       gnuplot
       qrencode
+      ghostscript
       tourenbuchctl
       texlive.combined.scheme-full
       pwgen
@@ -17,6 +18,7 @@ with lib;
       teensy-loader-cli
       lazygit
       restic
+      go-task
       (aspellWithDicts (
         dicts: with dicts; [
           en

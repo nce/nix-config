@@ -39,7 +39,9 @@ with lib;
         "moneymoney"
         "citrix-workspace"
         "bambu-studio"
+        "orbstack"
         "ghostty"
+        "discord"
       ];
 
       masApps = {

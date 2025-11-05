@@ -19,6 +19,7 @@ with lib;
       stern
       krew
       teleport
+      kind
     ];
   };
 

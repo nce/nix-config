@@ -11,13 +11,13 @@ with lib;
       go
       golangci-lint
       go-critic
+      air
       cargo
       nixfmt-rfc-style
       coreutils
     ];
   };
 
-  programs =
-    {
-    };
+  programs = {
+  };
 }

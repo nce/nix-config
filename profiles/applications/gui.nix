@@ -10,7 +10,6 @@ with lib;
     packages = with pkgs; [
       slack
       obsidian
-      discord
       soundsource
     ];
   };
