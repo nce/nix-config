@@ -52,7 +52,7 @@ darwin-rebuild switch --flake ~/vcs/github/nce/nix-config/.#macminipro24
 
 # Updates
 ```sh
-nix flake update
+nix flake --extra-experimental-features "nix-command flakes" update
 darwin-rebuild switch --flake ...
 ```
 

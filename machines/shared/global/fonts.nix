@@ -15,8 +15,7 @@ with lib;
         font-awesome
         nerd-fonts.fira-code
         noto-fonts
-        noto-fonts-emoji
-        noto-fonts-extra
+        noto-fonts-color-emoji
         roboto
         source-code-pro
       ];

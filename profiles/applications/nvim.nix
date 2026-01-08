@@ -112,7 +112,7 @@
         }
 
         # treesitter
-        nvim-treesitter-textobjects
+        #nvim-treesitter-textobjects -- this failed building
         {
           plugin = nvim-treesitter.withAllGrammars;
           type = "lua";
