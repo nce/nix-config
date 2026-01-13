@@ -13,8 +13,8 @@ with lib;
       go-critic
       air
       cargo
-      nixfmt-rfc-style
       coreutils
+      nixfmt
     ];
   };
 

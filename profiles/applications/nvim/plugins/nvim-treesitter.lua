@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter'.setup {
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
 
@@ -104,5 +104,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
-
+--local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")

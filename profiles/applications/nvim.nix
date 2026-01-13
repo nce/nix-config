@@ -10,7 +10,6 @@
       gopls
       gofumpt
       gotools
-      nixfmt-rfc-style
       nil
     ];
   };
@@ -112,7 +111,7 @@
         }
 
         # treesitter
-        #nvim-treesitter-textobjects -- this failed building
+        nvim-treesitter-textobjects
         {
           plugin = nvim-treesitter.withAllGrammars;
           type = "lua";

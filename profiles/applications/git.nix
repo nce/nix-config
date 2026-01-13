@@ -16,41 +16,46 @@ with lib;
   programs = {
     git = {
       enable = true;
-      delta.enable = true;
 
-      userEmail = "git@nce.wtf";
-      userName = "Ulli Goschler";
+      settings = {
+        user = {
+          email = "git@nce.wtf";
+          name = "Ulli Goschler";
+          signingkey = "~/.ssh/git_ed25519.pub";
+        };
+
+        delta.enable = true;
+
+        extraConfig = {
+          gpg = {
+            format = "ssh";
+          };
+
+          format = {
+            signoff = true;
+          };
+
+          credential = {
+            helper = "osxkeychain";
+          };
+
+          merge = {
+            conflictstyle = "diff3";
+          };
+
+          push = {
+            default = "current";
+            autoSetupRemote = true;
+          };
+
+          branch = {
+            autosetuprebase = "always";
+          };
+        };
+
+      };
 
       signing.signByDefault = true;
-
-      signing.key = "~/.ssh/git_ed25519.pub";
-
-      extraConfig = {
-        gpg = {
-          format = "ssh";
-        };
-
-        format = {
-          signoff = true;
-        };
-
-        credential = {
-          helper = "osxkeychain";
-        };
-
-        merge = {
-          conflictstyle = "diff3";
-        };
-
-        push = {
-          default = "current";
-          autoSetupRemote = true;
-        };
-
-        branch = {
-          autosetuprebase = "always";
-        };
-      };
 
       ignores = [
         ".DS_Store"
