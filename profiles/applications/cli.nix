@@ -8,6 +8,8 @@ with lib;
 {
   home = {
     packages = with pkgs; [
+      pastel
+      atuin
       gnuplot
       qrencode
       ghostscript

@@ -21,38 +21,35 @@ with lib;
         user = {
           email = "git@nce.wtf";
           name = "Ulli Goschler";
-          signingkey = "~/.ssh/git_ed25519.pub";
+          signingkey = "~/.ssh/git_ed25519";
         };
 
         delta.enable = true;
 
-        extraConfig = {
-          gpg = {
-            format = "ssh";
-          };
-
-          format = {
-            signoff = true;
-          };
-
-          credential = {
-            helper = "osxkeychain";
-          };
-
-          merge = {
-            conflictstyle = "diff3";
-          };
-
-          push = {
-            default = "current";
-            autoSetupRemote = true;
-          };
-
-          branch = {
-            autosetuprebase = "always";
-          };
+        gpg = {
+          format = "ssh";
         };
 
+        format = {
+          signoff = true;
+        };
+
+        credential = {
+          helper = "osxkeychain";
+        };
+
+        merge = {
+          conflictstyle = "diff3";
+        };
+
+        push = {
+          default = "current";
+          autoSetupRemote = true;
+        };
+
+        branch = {
+          autosetuprebase = "always";
+        };
       };
 
       signing.signByDefault = true;
