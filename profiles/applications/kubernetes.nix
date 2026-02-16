@@ -15,11 +15,13 @@ with lib;
       kubecolor
       kustomize
       kubernetes-helm
+      helm-docs
       dive
       stern
       krew
       teleport
       kind
+      crossplane-cli
     ];
   };
 

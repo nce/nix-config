@@ -15,6 +15,7 @@ with lib;
       cargo
       coreutils
       nixfmt
+      gh
     ];
   };
 
