@@ -22,6 +22,7 @@ with lib;
       teleport
       kind
       crossplane-cli
+      kubebuilder
     ];
   };
 

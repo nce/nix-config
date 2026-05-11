@@ -21,6 +21,7 @@ with lib;
       lazygit
       restic
       go-task
+      exiftool
       (aspellWithDicts (
         dicts: with dicts; [
           en

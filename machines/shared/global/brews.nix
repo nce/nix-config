@@ -31,8 +31,11 @@ with lib;
       taps = [
       ];
 
-      casks = [
+      brews = [
         "container"
+      ];
+
+      casks = [
         "macpass"
         "tunnelblick"
         "keybase"
@@ -42,6 +45,7 @@ with lib;
         "orbstack"
         "ghostty"
         "discord"
+        "helium-browser"
       ];
 
       masApps = {
