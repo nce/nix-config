@@ -9,7 +9,11 @@
     packages = with pkgs; [
       gopls
       gofumpt
-      gotools
+      (gotools.overrideAttrs (old: {
+        postInstall = (old.postInstall or "") + ''
+          rm -f $out/bin/modernize
+        '';
+      }))
       nil
     ];
   };
@@ -23,6 +27,8 @@
       vimAlias = true;
       vimdiffAlias = true;
       defaultEditor = true;
+      withRuby = true;
+      withPython3 = true;
 
       plugins = with pkgs.vimPlugins; [
         # lsp
@@ -177,7 +183,7 @@
         }
       ];
 
-      extraLuaConfig = ''
+      initLua = ''
 
         ${builtins.readFile ./nvim/options.lua}
         ${builtins.readFile ./nvim/remap.lua}

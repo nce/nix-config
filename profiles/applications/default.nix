@@ -13,5 +13,6 @@
     ./ssh.nix
     ./work.nix
     ./tiling.nix
+    ./ai.nix
   ];
 }
